@@ -1,6 +1,5 @@
 {
-    "warehouse": "snowflake",
+    "warehouse": "",
     "defaultSchema": "dataform",
-    "defaultDatabase": "DEMO_DB",
     "assertionSchema": "dataform_assertions"
 }

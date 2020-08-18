@@ -2,7 +2,7 @@ config {
   type: "declaration",
   database: "SNOWFLAKE_SAMPLE_DATA",
   schema: "TPCH_SF1",
-  name: "NATION",
+  name: "orders",
   tags: ["source"],
-  description: "Raw nations table"
+  description: "Raw orders table"
 }

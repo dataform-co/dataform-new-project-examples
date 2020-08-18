@@ -12,4 +12,4 @@ select
   o_orderdate as order_date,
   o_totalprice as total_price
 from
-  ${ref("ORDERS")}
+  ${ref("orders")}
