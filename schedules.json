@@ -1,8 +1,0 @@
-{
-  "notificationChannels": [{
-    "name": "team-email",
-    "email": {
-      "to": ["team@dataform.co"]
-    }
-  }]
-}
