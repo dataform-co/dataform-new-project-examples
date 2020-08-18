@@ -1,5 +1,6 @@
 config {
   type: "table",
+  schema: "snowflake_reporting",
   tags: ["reporting", "daily"],
   description: "This table contains summary stats by date aggregated by country",
   columns: {

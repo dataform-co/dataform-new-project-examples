@@ -1,6 +1,6 @@
 config {
   type: "table",
-  schema: "reporting",
+  schema: "reporting_bigqury",
   tags: ["daily"],
   bigquery: {
     partitionBy: "date(created_at)"

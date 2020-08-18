@@ -1,5 +1,6 @@
 config {
   type: "table",
+  schema: "redshift_reporting",
   tags: ["reporting", "daily"],
   description: "This table contains all information about customers, bringing all CRM, shopify and stripe data for individual customers into one place.",
   columns: {
@@ -33,7 +34,7 @@ select
   sum(orders.amount) as total_spent
 from
   ${ref("stg_crm_customers")} customers
-  left join ${ref("order_stats")} orders 
+  left join ${ref("redshift_reporting","order_stats")} orders 
     on customers.customer_id = orders.customer_id
 where
   customers.customer_id is not null

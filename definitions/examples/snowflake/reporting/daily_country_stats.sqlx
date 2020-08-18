@@ -1,5 +1,6 @@
 config {
   type: "table",
+  schema: "snowflake_reporting",
   tags: ["reporting", "daily"],
   description: "This table contains summary stats by date aggregated by country",
   columns: {
@@ -23,8 +24,8 @@ select
   sum(orders.total_price) as total_price,
   sum(line_items) as line_items
 from
-  ${ref("order_stats")} orders
-  left join ${ref("customer_stats")} customers
+  ${ref("snowflake_reporting","order_stats")} orders
+  left join ${ref("snowflake_reporting","customer_stats")} customers
     on orders.customer_key = customers.customer_key
 group by
   1,2,3

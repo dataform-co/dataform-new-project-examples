@@ -1,6 +1,6 @@
 config {
   type: "table",
-  schema: "staging",
+  schema: "snowflake_staging",
   tags: ["staging", "daily"],
   description: "Cleaned version of the raw customer table."
 }
@@ -12,6 +12,6 @@ select
   c_phone as phone_number,
   n_name as country_name
 from
-  ${ref("customer")} as customer
+  ${ref("TPCH_SF1","customer")} as customer
   left join ${ref("nation")} as nations
     on customer.c_nationkey = nations.n_nationkey
